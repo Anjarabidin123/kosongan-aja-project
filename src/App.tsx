@@ -8,6 +8,7 @@ import { ReportsPage } from "./pages/ReportsPage";
 import { StoreSettings } from "./pages/StoreSettings";
 import { Dashboard } from "./pages/Dashboard";
 import { BackupRestorePage } from "./pages/BackupRestorePage";
+import { PPOB } from "./pages/PPOB";
 import NotFound from "./pages/NotFound";
 import { POSProvider } from "@/contexts/POSContext";
 import { AuthProvider } from "@/contexts/AuthContext";
@@ -65,6 +66,11 @@ const App = () => {
                     <Route path="/settings" element={
                       <ProtectedRoute>
                         <StoreSettings />
+                      </ProtectedRoute>
+                    } />
+                    <Route path="/ppob" element={
+                      <ProtectedRoute>
+                        <PPOB />
                       </ProtectedRoute>
                     } />
                     <Route path="/admin/users" element={
